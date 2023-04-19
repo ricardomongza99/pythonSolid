@@ -24,14 +24,3 @@ Install requirements
 Install local src/ folder
 
     >python -m pip install -e src 
-
-# Building Docker image
-At the root of the project run
-
-    >docker image build -t YOUR_NAME .
-
-This will create a docker image using the `Dockerfile` with the image name `YOUR_NAME`
-
-Run container
-
-    >docker run YOUR_NAME
