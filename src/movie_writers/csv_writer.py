@@ -4,6 +4,8 @@ from models import Movie
 from . import MovieWriter
 
 
+# Interface Segregation Principle (ISP) and Liskov Substitution Principle (LSP): The MovieWriter abstract base class
+# defines a common interface for writing movies.
 class CSVMovieWriter(MovieWriter):
     def __init__(self, file_path: str, fieldnames: List[str]):
         self.file_path = file_path

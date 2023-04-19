@@ -5,6 +5,8 @@ from movie_fetchers import MovieFetcher, IMDBMovieFetcher
 from movie_writers import MovieWriter, CSVMovieWriter
 
 
+# Single Responsibility Principle (SRP): The main function orchestrates the fetching and writing of movies,
+# keeping the code modular and easier to maintain.
 def main():
     # Can use any MovieFetch in the future (rotten tomatoes, metacritic, etc.)
     movie_fetcher: MovieFetcher = IMDBMovieFetcher(url=URL)

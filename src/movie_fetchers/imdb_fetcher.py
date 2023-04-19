@@ -6,10 +6,11 @@ from models import Movie
 from . import MovieFetcher
 
 
+# Open/Closed Principle (OCP) and Dependency Inversion Principle (DIP): The IMDBMovieFetcher class implements the
+# MovieFetcher interface and can be easily extended or replaced without modifying the rest of the code.
 class IMDBMovieFetcher(MovieFetcher):
     def __init__(self, url):
         self.url = url
-
 
     def fetch_movies(self) -> List[Movie]:
         response = requests.get(self.url)
